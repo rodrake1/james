@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-results',
+  selector: 'jd-results',
   templateUrl: './results.component.html',
   styleUrls: ['./results.component.scss']
 })

@@ -1,0 +1,19 @@
+.jd-form-control {
+	height: 40px;
+	border-radius: 5px;
+	border: 1px solid var(--jd-color-grey-lighter);
+	background-color: var(--jd-color-background);
+	line-height: 16px;
+	font-size: 1.4em;
+	font-weight: 500;
+	color: var(--jd-color-grey-darker);
+	text-overflow: ellipsis;
+
+	&__label {
+		margin-bottom: 7px;
+		line-height: 15px;
+		font-size: 1.3em;
+		font-weight: 500;
+		color: var(--jd-color-hunt-darker);
+	}
+}

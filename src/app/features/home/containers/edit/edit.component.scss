@@ -1,0 +1,54 @@
+.jd-edit {
+	padding: 20px 0 30px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px 0 var(--jd-color-black-5);
+	background-color: var(--jd-color-white);
+
+	&__header {
+		display: flex;
+		align-items: center;
+		padding: 0 32px 15px;
+
+		&__image {
+			margin-left: 30px;
+		}
+
+		&__title {
+			display: flex;
+			flex-flow: column;
+			gap: 6px;
+			margin-left: 22px;
+		}
+
+		&__name {
+			line-height: 24px;
+			font-size: 2.1em;
+			font-weight: 700;
+			color: var(--jd-color-hunt-darker);
+		}
+
+		&__id {
+			line-height: 16px;
+			font-size: 1.4em;
+			font-weight: 500;
+		}
+	}
+
+	&__main {
+		margin-top: 34px;
+		padding: 0 30px;
+
+		&__title {
+			line-height: 18px;
+			font-size: 1.6em;
+			font-weight: 500;
+			color: var(--jd-color-hunt-darker);
+		}
+	}
+
+	&__divider {
+		width: 100%;
+		margin: 18px 0 20px;
+		border: 1px solid var(--jd-color-grey-lighter);
+	}
+}

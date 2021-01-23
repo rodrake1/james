@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './features/home/containers/home.component';
-import { ResultsComponent } from './features/results/containers/results.component';
+import { EditComponent } from './features/home/containers/edit/edit.component';
+import { ResultsComponent } from './features/home/containers/results/results.component';
 
 const routes: Routes = [
 	{
@@ -11,6 +12,10 @@ const routes: Routes = [
 			{
 				path: 'results',
 				component: ResultsComponent
+			},
+			{
+				path: 'results/edit/14131',
+				component: EditComponent
 			},
 			{
 				path: '',

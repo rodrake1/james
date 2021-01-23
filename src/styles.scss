@@ -1,4 +1,8 @@
 /* You can add global styles to this file, and also import other style files */
+@import './theme/fonts';
+@import './theme/forms';
+@import './theme/variables';
+
 html {
 	box-sizing: border-box;
 }
@@ -14,4 +18,8 @@ body {
 	background-color: var(--jd-color-background);
 	font-family: var(--jd-font-margem);
 	color: var(--jd-color-hunt-alt);
+
+	:focus {
+		outline: none;
+	}	
 }
