@@ -1,0 +1,55 @@
+.jd-card {
+	display: flex;
+  padding: 8px;
+  border-radius: 5px;
+  box-shadow: 0 1px 1px 0 var(--jd-color-black-5);
+  background-color: var(--jd-color-white);
+
+	&__text {
+		display: flex;
+    flex-flow: column;
+    justify-content: center;
+		gap: 10px;
+		margin-left: 22px;
+	}
+
+	&__title {
+		display: flex;
+    align-items: center;
+    line-height: 21px;
+	}
+  
+	&__subtitle {
+    display: flex;
+		align-items: center;
+    line-height: 17px;
+	}
+
+	&__name {
+		font-size: 1.8em;
+		font-weight: 700;
+		color: var(--jd-color-hunt-darker);
+	}
+
+	&__id {
+		margin-left: 10px;
+		font-size: 1.4em;
+		font-weight: 500;
+	}
+
+	&__city {
+		font-size: 1.5em;
+		font-weight: 500;
+	}
+
+	&__address {
+		font-size: 1.5em;
+		font-weight: 400;
+	}
+
+	&__divider {
+		height: 9px;
+		margin: 0 10px;
+		border: 1px solid var(--jd-color-grey-light);
+	}
+}

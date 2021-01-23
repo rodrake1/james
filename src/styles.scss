@@ -10,11 +10,8 @@ html {
 }
 
 body {
-	background-color: #f8f9fd;
-	font-family: Margem, Roboto, 'Helvetica Neue', sans-serif;
-}
-
-@font-face {
-	font-family: Margem;
-	src: url(assets/fonts/Margem.ttf);
+	font-size: 62.5%;
+	background-color: var(--jd-color-background);
+	font-family: var(--jd-font-margem);
+	color: var(--jd-color-hunt-alt);
 }
