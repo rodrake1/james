@@ -1,2 +1,9 @@
 <label class="jd-form-control__label">{{ label }}</label>
-<input type="text" class="form-control jd-form-control" />
+<input
+	#input
+	class="form-control jd-form-control"
+  [type]="type"
+  [attr.maxLength]="maxLength || null"
+	(focus)="onFocus($event)"
+	(blur)="onBlur($event)"
+/>

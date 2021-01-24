@@ -40,20 +40,20 @@
 
 				<jd-select label="Tipo de conta"></jd-select>
 
-				<jd-input label="CPF / CNPJ"></jd-input>
+				<jd-input mask="cpfCnpj" label="CPF / CNPJ"></jd-input>
 			</div>
 
 			<div class="jd-edit__section__row">
 				<div class="jd-edit__section__input-group">
-					<jd-input label="Agência"></jd-input>
-					
-					<jd-input></jd-input>
+					<jd-input label="Agência" [maxLength]="4"></jd-input>
+
+					<jd-input [maxLength]="1"></jd-input>
 				</div>
-				
+
 				<div class="jd-edit__section__input-group">
 					<jd-input label="Conta"></jd-input>
-					
-					<jd-input></jd-input>
+
+					<jd-input [maxLength]="1"></jd-input>
 				</div>
 
 				<jd-select label="Saque automático?"></jd-select>
