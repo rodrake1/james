@@ -16,13 +16,47 @@
 	</header>
 
 	<main class="jd-edit__main">
-		<section>
-			<span class="jd-edit__main__title">Informações Básicas</span>
+		<section class="jd-edit__section">
+			<span class="jd-edit__section__title">Informações Básicas</span>
 
 			<div class="jd-edit__divider"></div>
 
-			<div class="jd-edit__main__row">
-				<jd-input label="Nome"></jd-input>
+			<div class="jd-edit__section__row">
+				<jd-select label="Nome"></jd-select>
+
+				<jd-select label="Cidade"></jd-select>
+
+				<jd-input label="Endereço"></jd-input>
+			</div>
+		</section>
+
+		<section class="jd-edit__section">
+			<span class="jd-edit__section__title">Financeiro</span>
+
+			<div class="jd-edit__divider"></div>
+
+			<div class="jd-edit__section__row">
+				<jd-select label="Banco"></jd-select>
+
+				<jd-select label="Tipo de conta"></jd-select>
+
+				<jd-input label="CPF / CNPJ"></jd-input>
+			</div>
+
+			<div class="jd-edit__section__row">
+				<div class="jd-edit__section__input-group">
+					<jd-input label="Agência"></jd-input>
+					
+					<jd-input></jd-input>
+				</div>
+				
+				<div class="jd-edit__section__input-group">
+					<jd-input label="Conta"></jd-input>
+					
+					<jd-input></jd-input>
+				</div>
+
+				<jd-select label="Saque automático?"></jd-select>
 			</div>
 		</section>
 	</main>
