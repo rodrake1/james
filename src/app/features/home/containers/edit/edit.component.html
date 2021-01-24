@@ -1,6 +1,6 @@
 <div class="jd-edit">
 	<header class="jd-edit__header">
-		<div class="jd-edit__back-button">
+		<div class="jd-edit__header__back-button">
 			<img src="assets/icons/jd_arrow_backward.svg" alt="" />
 		</div>
 
@@ -22,9 +22,19 @@
 			<div class="jd-edit__divider"></div>
 
 			<div class="jd-edit__section__row">
-				<jd-select label="Nome"></jd-select>
+				<jd-select label="Nome">
+					<option selected>Open this select menu</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</jd-select>
 
-				<jd-select label="Cidade"></jd-select>
+				<jd-select label="Cidade">
+					<option selected>Open this select menu</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</jd-select>
 
 				<jd-input label="Endereço"></jd-input>
 			</div>
@@ -36,9 +46,19 @@
 			<div class="jd-edit__divider"></div>
 
 			<div class="jd-edit__section__row">
-				<jd-select label="Banco"></jd-select>
+				<jd-select label="Banco">
+					<option selected>Open this select menu</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</jd-select>
 
-				<jd-select label="Tipo de conta"></jd-select>
+				<jd-select label="Tipo de conta">
+					<option selected>Open this select menu</option>
+					<option value="1">One</option>
+					<option value="2">Two</option>
+					<option value="3">Three</option>
+				</jd-select>
 
 				<jd-input mask="cpfCnpj" label="CPF / CNPJ"></jd-input>
 			</div>
@@ -56,7 +76,10 @@
 					<jd-input [maxLength]="1"></jd-input>
 				</div>
 
-				<jd-select label="Saque automático?"></jd-select>
+				<jd-select label="Saque automático?">
+					<option selected>Sim</option>
+					<option value="1">Não</option>
+				</jd-select>
 			</div>
 		</section>
 	</main>

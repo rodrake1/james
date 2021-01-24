@@ -1,29 +1,37 @@
 .jd-card {
 	display: flex;
-  padding: 8px;
-  border-radius: 5px;
-  box-shadow: 0 1px 1px 0 var(--jd-color-black-5);
+	margin-top: 5px;
+	padding: 8px;
+	border-radius: 5px;
+	box-shadow: 0 1px 1px 0 var(--jd-color-black-5);
 	background-color: var(--jd-color-white);
 	cursor: pointer;
 
 	&__text {
 		display: flex;
-    flex-flow: column;
-    justify-content: center;
+		flex-flow: column;
+		justify-content: center;
 		gap: 10px;
 		margin-left: 22px;
 	}
 
 	&__title {
 		display: flex;
-    align-items: center;
-    line-height: 21px;
-	}
-  
-	&__subtitle {
-    display: flex;
 		align-items: center;
-    line-height: 17px;
+		line-height: 21px;
+	}
+
+	&__subtitle {
+		display: flex;
+		align-items: center;
+		line-height: 17px;
+	}
+
+	&__picture {
+		img {
+			width: 74px;
+			height: 74px;
+		}
 	}
 
 	&__name {
@@ -43,7 +51,7 @@
 		font-weight: 500;
 	}
 
-	&__address {
+	&__street {
 		font-size: 1.5em;
 		font-weight: 400;
 	}

@@ -1,17 +1,18 @@
 <div class="jd-card">
-  <div class="jd-card__image">
-    <img src="assets/images/subway.png" alt="">
-  </div>
-  
-  <div class="jd-card__text">
-    <div class="jd-card__title">
-      <span class="jd-card__name">Subway</span><span class="jd-card__id">14131</span>
-    </div>
+	<div class="jd-card__picture">
+		<img [src]="picture" />
+	</div>
 
-    <div class="jd-card__subtitle">
-      <span class="jd-card__city">Curitiba</span>
-      <div class="jd-card__divider"></div>
-      <span class="jd-card__address">R. Reinaldino Schaffenberg de Quadros, 1760 - Alto da XV</span>
-    </div>
-  </div>
+	<div class="jd-card__text">
+		<div class="jd-card__title">
+			<span class="jd-card__name">{{ name }}</span>
+			<span class="jd-card__id">{{ id }}</span>
+		</div>
+
+		<div class="jd-card__subtitle">
+			<span class="jd-card__city">{{ city }}</span>
+			<div class="jd-card__divider"></div>
+			<span class="jd-card__street">{{ street }}</span>
+		</div>
+	</div>
 </div>

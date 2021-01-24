@@ -14,7 +14,7 @@ const routes: Routes = [
 				component: ResultsComponent
 			},
 			{
-				path: 'results/edit/14131',
+				path: 'results/:id',
 				component: EditComponent
 			},
 			{

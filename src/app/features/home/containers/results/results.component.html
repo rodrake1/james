@@ -1,1 +1,8 @@
-<jd-card routerLink="edit/14131"></jd-card>
+<jd-card
+	*ngFor="let establishment of establishments$ | async"
+	[picture]="establishment.picture"
+	[name]="establishment.name"
+	[id]="establishment.id"
+	[address]="establishment.address"
+	(click)="editStablishment(establishment.id)"
+></jd-card>
