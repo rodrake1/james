@@ -1,4 +1,4 @@
-export interface Establishments {
+export interface Establishment {
 	id: string;
 	index: number;
 	guid: string;

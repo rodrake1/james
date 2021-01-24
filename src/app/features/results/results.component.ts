@@ -1,8 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Store } from '@ngrx/store';
 import { Observable } from 'rxjs';
-import { Establishments } from 'src/app/models/Establishments';
-import { EstablishmentsService } from 'src/app/services/establishments.service';
+import { getEstablishments } from 'src/app/core/store/index';
+import { selectEstablishments } from 'src/app/core/store/reducers/establishments.reducers';
+import { Establishment } from 'src/app/models/Establishment';
 
 @Component({
 	selector: 'jd-results',
@@ -10,12 +12,13 @@ import { EstablishmentsService } from 'src/app/services/establishments.service';
 	styleUrls: ['./results.component.scss']
 })
 export class ResultsComponent implements OnInit {
-  establishments$: Observable<Establishments>;
+  establishments$: Observable<Establishment[]>;
 
-	constructor(private establishmentsService: EstablishmentsService, private router: Router) {}
+	constructor(private store: Store, private router: Router) {}
 
 	ngOnInit(): void {
-    this.establishments$ = this.establishmentsService.getEstablishments();
+		this.establishments$ = this.store.select(selectEstablishments);
+		this.store.dispatch(getEstablishments());
 	}
 
 	editStablishment(id: string): void {
