@@ -14,14 +14,10 @@ Run `npm install @angluar/cli -g` to install the Angular CLI globally.
 
 Download  the project [here](https://github.com/rodrake1/james/archive/master.zip) and unzip it in the folder of your choice.
 
-You may instead run `git clone https://github.com/rodrake1/james.git` to clone this repository into your local machine. For that, you need to have Git installed. Download it [here](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe) or visit [here](https://git-scm.com/).
+You may instead run `git clone https://github.com/rodrake1/james.git` to clone this repository into your local machine. For that, you need to have Git installed. Download it [here](https://github.com/git-for-windows/git/releases/download/v2.30.0.windows.2/Git-2.30.0.2-64-bit.exe) or visit [here](https://git-scm.com/). After cloning the repository, run `cd james` to enter the project folder.
 
 
 ## Development server
-
-Run `git clone https://github.com/rodrake1/james.git` to clone this repository into your local machine.
-
-Run `cd james` to enter the project folder.
 
 Run `npm install` to install all the projetct's dependencies.
 
