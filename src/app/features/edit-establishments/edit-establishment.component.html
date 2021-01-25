@@ -1,7 +1,7 @@
 <div class="jd-edit" *ngIf="establishment$ | async as establishment">
 	<header class="jd-edit__header">
 		<div class="jd-edit__header__back-button">
-			<img src="assets/icons/jd_arrow_backward.svg" alt="" />
+			<jd-back-button (click)="goBack()"></jd-back-button>
 		</div>
 
 		<div class="jd-edit__header__picture">

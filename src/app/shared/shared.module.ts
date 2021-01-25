@@ -5,8 +5,15 @@ import { InputComponent } from './components/input/input.component';
 import { SelectComponent } from './components/select/select.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { ButtonComponent } from './components/button/button.component';
+import { BackButtonComponent } from './components/back-button/back-button.component';
 
-const components = [CardComponent, InputComponent, SelectComponent, ButtonComponent];
+const components = [
+	CardComponent,
+	InputComponent,
+	SelectComponent,
+	ButtonComponent,
+	BackButtonComponent
+];
 
 @NgModule({
 	declarations: components,

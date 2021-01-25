@@ -9,11 +9,12 @@ import { Cities } from 'src/app/consts/Cities';
 import { EstablishmentNames } from 'src/app/consts/EstablishmentNames';
 import { saveEstablishment, selectEstablishments } from 'src/app/core/store';
 import { Establishment } from 'src/app/models/Establishment';
+import { Location } from '@angular/common';
 
 @Component({
 	selector: 'jd-edit',
 	templateUrl: './edit-establishment.component.html',
-	styleUrls: ['./edit-establishment.component.scss']
+	styleUrls: ['./edit-establishment.component.scss'],
 })
 export class EditEstablishmentComponent implements OnInit {
 	establishment$: Observable<Establishment>;
@@ -22,11 +23,17 @@ export class EditEstablishmentComponent implements OnInit {
 	cities = Cities;
 	banks = Banks;
 
-	constructor(private route: ActivatedRoute, private store: Store, private fb: FormBuilder) {}
+	constructor(
+		private route: ActivatedRoute,
+		private store: Store,
+		private fb: FormBuilder,
+		private location: Location
+	) {}
 
 	ngOnInit(): void {
 		this.intiForm();
 		this.establishment$ = this.getEstablishment();
+		this.store.subscribe(console.log);
 	}
 
 	intiForm() {
@@ -62,6 +69,9 @@ export class EditEstablishmentComponent implements OnInit {
 	save() {
 		this.store.dispatch(saveEstablishment({ payload: this.form.value }));
 		this.form.markAsPristine();
-		console.log(this.form.value);
+	}
+
+	goBack() {
+		this.location.back();
 	}
 }
