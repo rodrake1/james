@@ -7,7 +7,7 @@ import { map, tap, withLatestFrom } from 'rxjs/operators';
 import { Banks } from 'src/app/consts/Banks';
 import { Cities } from 'src/app/consts/Cities';
 import { EstablishmentNames } from 'src/app/consts/EstablishmentNames';
-import { selectEstablishments } from 'src/app/core/store';
+import { saveEstablishment, selectEstablishments } from 'src/app/core/store';
 import { Establishment } from 'src/app/models/Establishment';
 
 @Component({
@@ -17,10 +17,10 @@ import { Establishment } from 'src/app/models/Establishment';
 })
 export class EditEstablishmentComponent implements OnInit {
 	establishment$: Observable<Establishment>;
-  form: FormGroup;
-  names = EstablishmentNames;
-  cities = Cities;
-  banks = Banks;
+	form: FormGroup;
+	names = EstablishmentNames;
+	cities = Cities;
+	banks = Banks;
 
 	constructor(private route: ActivatedRoute, private store: Store, private fb: FormBuilder) {}
 
@@ -31,13 +31,14 @@ export class EditEstablishmentComponent implements OnInit {
 
 	intiForm() {
 		this.form = this.fb.group({
-      name: [null, Validators.required],
-      city: [null, Validators.required],
+			id: [null],
+			name: [null, Validators.required],
+			city: [null, Validators.required],
 			street: [null, Validators.required],
 			bank: [null, Validators.required],
 			accountType: [null, Validators.required],
-			cpfCnpj: [null, Validators.required],
-			branch: [null, Validators.required],
+			cpfCnpj: [null, [Validators.required, Validators.minLength(11), Validators.maxLength(12)]],
+			branch: [null, [Validators.required, Validators.minLength(4), Validators.maxLength(4)]],
 			branchDigit: [null, Validators.required],
 			account: [null, Validators.required],
 			accountDigit: [null, Validators.required],
@@ -54,14 +55,13 @@ export class EditEstablishmentComponent implements OnInit {
 
 				return establishments.find(establishmentById);
 			}),
-			tap((establishment) => {
-        this.form.patchValue(establishment);
-				console.log(this.form.value);
-			})
+			tap((establishment) => this.form.patchValue(establishment))
 		);
 	}
 
-	onSave() {
+	save() {
+		this.store.dispatch(saveEstablishment({ payload: this.form.value }));
+		this.form.markAsPristine();
 		console.log(this.form.value);
 	}
 }

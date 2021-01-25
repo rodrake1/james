@@ -16,7 +16,7 @@
 	</header>
 
 	<main class="jd-edit__main">
-		<form [formGroup]="form" (ngSubmit)="onSave()">
+		<form [formGroup]="form" (ngSubmit)="save()">
 			<section class="jd-edit__section">
 				<span class="jd-edit__section__title">Informações Básicas</span>
 
@@ -80,6 +80,7 @@
 						label="CPF / CNPJ"
 						formControlName="cpfCnpj"
 						ngDefaultControl
+						[maxlength]="12"
 						[value]="establishment.cpfCnpj"
 					></jd-input>
 				</div>
@@ -129,7 +130,9 @@
 					</jd-select>
 				</div>
 			</section>
-			<button>Teste</button>
+			<footer class="jd-edit__footer">
+				<jd-button type="submit" [disabled]="form.invalid || form.pristine">SALVAR</jd-button>
+			</footer>
 		</form>
 	</main>
 </div>
