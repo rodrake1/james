@@ -6,5 +6,7 @@ import { Component, Input } from '@angular/core';
 	styleUrls: ['./select.component.scss']
 })
 export class SelectComponent {
-  @Input() label: string;
+	@Input() label: string;
+	
+	@Input() value: string = null;
 }

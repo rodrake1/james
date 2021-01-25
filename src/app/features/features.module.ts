@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
-import { EditComponent } from './edit/edit.component';
-import { ResultsComponent } from './results/results.component';
+import { EditEstablishmentComponent } from './edit-establishments/edit-establishment.component';
+import { EstablishmentsComponent } from './establishments/establishments.component';
 import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
-	declarations: [ResultsComponent, EditComponent],
+	declarations: [EstablishmentsComponent, EditEstablishmentComponent],
 	imports: [SharedModule]
 })
 export class FeaturesModule {}

@@ -10,4 +10,14 @@ export interface Establishment {
 	registered: string;
 	latitude: string;
 	longitude: string;
+	street?: string;
+	city?: string;
+	bank?: string;
+	accountType?: string;
+	cpfCnpj?: string;
+	branch?: string;
+	branchDigit?: string;
+	account?: string;
+	accountDigit?: string;
+	autoWithdraw?: boolean;
 }

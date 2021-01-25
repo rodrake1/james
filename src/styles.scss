@@ -18,6 +18,7 @@ body {
 	background-color: var(--jd-color-background);
 	font-family: var(--jd-font-margem);
 	color: var(--jd-color-hunt-alt);
+	overflow-y: scroll;
 
 	:focus {
 		outline: none;

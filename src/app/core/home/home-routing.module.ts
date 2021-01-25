@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { EditComponent } from 'src/app/features/edit/edit.component';
-import { ResultsComponent } from 'src/app/features/results/results.component';
+import { EditEstablishmentComponent } from 'src/app/features/edit-establishments/edit-establishment.component';
+import { EstablishmentsComponent } from 'src/app/features/establishments/establishments.component';
 import { HomeComponent } from './home.component';
 
 const routes: Routes = [
@@ -10,16 +10,16 @@ const routes: Routes = [
 		component: HomeComponent,
 		children: [
 			{
-				path: 'results',
-				component: ResultsComponent
+				path: 'establishments',
+				component: EstablishmentsComponent
 			},
 			{
-				path: 'results/:id',
-				component: EditComponent
+				path: 'establishments/edit',
+				component: EditEstablishmentComponent
 			},
 			{
 				path: '',
-				redirectTo: 'results',
+				redirectTo: 'establishments',
 				pathMatch: 'full'
 			}
 		]

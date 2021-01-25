@@ -1,0 +1,135 @@
+<div class="jd-edit" *ngIf="establishment$ | async as establishment">
+	<header class="jd-edit__header">
+		<div class="jd-edit__header__back-button">
+			<img src="assets/icons/jd_arrow_backward.svg" alt="" />
+		</div>
+
+		<div class="jd-edit__header__picture">
+			<img [src]="establishment.picture" alt="" />
+		</div>
+
+		<div class="jd-edit__header__title">
+			<span class="jd-edit__header__name">{{ establishment.name }}</span>
+
+			<span class="jd-edit__header__id">ID: {{ establishment.id }}</span>
+		</div>
+	</header>
+
+	<main class="jd-edit__main">
+		<form [formGroup]="form" (ngSubmit)="onSave()">
+			<section class="jd-edit__section">
+				<span class="jd-edit__section__title">Informações Básicas</span>
+
+				<div class="jd-edit__divider"></div>
+
+				<div class="jd-edit__section__row">
+					<jd-select
+						label="Nome"
+						formControlName="name"
+						ngDefaultControl
+						[value]="establishment.name"
+					>
+						<option [value]="name" *ngFor="let name of names">{{ name }}</option>
+					</jd-select>
+
+					<jd-select
+						label="Cidade"
+						formControlName="city"
+						ngDefaultControl
+						[value]="establishment.city"
+					>
+						<option [value]="city" *ngFor="let city of cities">{{ city }}</option>
+					</jd-select>
+
+					<jd-input
+						label="Endereço"
+						formControlName="street"
+						ngDefaultControl
+						[value]="establishment.street"
+					></jd-input>
+				</div>
+			</section>
+
+			<section class="jd-edit__section">
+				<span class="jd-edit__section__title">Financeiro</span>
+
+				<div class="jd-edit__divider"></div>
+
+				<div class="jd-edit__section__row">
+					<jd-select
+						label="Banco"
+						formControlName="bank"
+						ngDefaultControl
+						[value]="establishment.bank"
+					>
+						<option [value]="bank" *ngFor="let bank of banks">{{ bank }}</option>
+					</jd-select>
+
+					<jd-select
+						label="Tipo de conta"
+						formControlName="accountType"
+						ngDefaultControl
+						[value]="establishment.accountType"
+					>
+						<option value="Corrente">Corrente</option>
+						<option value="Poupança">Poupança</option>
+					</jd-select>
+
+					<jd-input
+						mask="cpfCnpj"
+						label="CPF / CNPJ"
+						formControlName="cpfCnpj"
+						ngDefaultControl
+						[value]="establishment.cpfCnpj"
+					></jd-input>
+				</div>
+
+				<div class="jd-edit__section__row">
+					<div class="jd-edit__section__input-group">
+						<jd-input
+							label="Agência"
+							[maxlength]="4"
+							formControlName="branch"
+							ngDefaultControl
+							[value]="establishment.branch"
+						></jd-input>
+
+						<jd-input
+							[maxlength]="1"
+							formControlName="branchDigit"
+							ngDefaultControl
+							[value]="establishment.branchDigit"
+						></jd-input>
+					</div>
+
+					<div class="jd-edit__section__input-group">
+						<jd-input
+							label="Conta"
+							formControlName="account"
+							ngDefaultControl
+							[value]="establishment.account"
+						></jd-input>
+
+						<jd-input
+							[maxlength]="1"
+							formControlName="accountDigit"
+							ngDefaultControl
+							[value]="establishment.accountDigit"
+						></jd-input>
+					</div>
+
+					<jd-select
+						label="Saque automático?"
+						formControlName="autoWithdraw"
+						ngDefaultControl
+						[value]="establishment.autoWithdraw"
+					>
+						<option [value]="true">Sim</option>
+						<option [value]="false">Não</option>
+					</jd-select>
+				</div>
+			</section>
+			<button>Teste</button>
+		</form>
+	</main>
+</div>

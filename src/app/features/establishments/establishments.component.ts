@@ -8,11 +8,11 @@ import { Establishment } from 'src/app/models/Establishment';
 
 @Component({
 	selector: 'jd-results',
-	templateUrl: './results.component.html',
-	styleUrls: ['./results.component.scss']
+	templateUrl: './establishments.component.html',
+	styleUrls: ['./establishments.component.scss']
 })
-export class ResultsComponent implements OnInit {
-  establishments$: Observable<Establishment[]>;
+export class EstablishmentsComponent implements OnInit {
+	establishments$: Observable<Establishment[]>;
 
 	constructor(private store: Store, private router: Router) {}
 
@@ -21,7 +21,7 @@ export class ResultsComponent implements OnInit {
 		this.store.dispatch(getEstablishments());
 	}
 
-	editStablishment(id: string): void {
-		this.router.navigate([`home/results/${id}`]);
+	editEstablishment(id: string): void {
+		this.router.navigate(['/home/establishments/edit', { id }]);
 	}
 }

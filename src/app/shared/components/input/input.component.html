@@ -2,8 +2,9 @@
 <input
 	#input
 	class="form-control jd-form-control"
-  [type]="type"
-  [attr.maxLength]="maxLength || null"
+	[type]="type"
+	[value]="value"
+	[attr.maxlength]="maxlength || null"
 	(focus)="onFocus($event)"
 	(blur)="onBlur($event)"
 />
